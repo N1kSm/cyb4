@@ -12,9 +12,7 @@
        setTimeout(() => {window.location.href = 'login.php'},2000)
        document.getElementById("btn1").innerHTML = "ОК";
        alert('Пользователь зарегестрирован. Вы будете перенаправлены на страницу входа')
-
-      }
-
+    }
 </script>
 
 </head>			
