@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Demo 01</title>
+		<meta charset="utf-8" />
+		<style>
+			h1 {
+				/* Мой CSS */
+				color: #995200;
+				background-color: rgb(246, 255, 224);
+			}
+		</style>
+	
+		<title>Кот</title>
+	</head>
+	<body>
+		
+		<a href="index1.html">Домашняя страница</a>
+		<!-- Моя первая страница   -->
+		<h1>
+			<span>Этот котик умеет мяукать!</span>
+		</h1>
+		<button id="btnElem">Мяукнуть</button>
+        
+        <p>Он может еще мяукнуть, наведи на фото</p>
+
+		<h1 id="hdr2">About cats</h1>
+		<img src="images/kot.jpg" id="imgElem" style="width:300px" />
+		
+		<script>
+		const btnEl = document.querySelector('#btnElem')
+		const imgEl = document.querySelector('#imgElem')
+		const title = document.querySelector('#hdr2')
+		title.style.color = 'red'
+
+		let trigger = false
+		
+		function triggerHello(){
+			trigger =! trigger
+			if (trigger){
+				title.innerHTML = 'Myau!'
+			} else {
+			title.innerHTML = 'About cats'
+			}
+		}
+
+		btnEl.addEventListener('click', triggerHello)
+		imgEl.addEventListener('mouseover', triggerHello)
+		imgEl.addEventListener('mouseout',triggerHello)
+
+		</script>
+
+	</body>
+</html>
